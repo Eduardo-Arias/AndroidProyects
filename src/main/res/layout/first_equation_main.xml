@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/first_activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="utng.edu.mx.da3_u1_jead_operaciones.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/equation"
+        android:textSize="15pt"
+        android:id="@+id/txv_title"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/equation1"
+        android:textSize="10pt"
+        android:paddingTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/txv_title"
+        android:id="@+id/txv_equation"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txv_equation"
+        android:text="@string/type_x"
+        android:textSize="10pt"
+        android:layout_marginTop="90dp"
+        android:id="@+id/txv_x"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_marginTop="85dp"
+        android:layout_below="@id/txv_equation"
+        android:layout_toEndOf="@id/txv_x"
+        android:id="@+id/edt_x"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txv_x"
+        android:text="@string/type_y"
+        android:textSize="10pt"
+        android:layout_marginTop="90dp"
+        android:id="@+id/txv_y"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_marginTop="85dp"
+        android:layout_below="@id/edt_x"
+        android:layout_toEndOf="@id/txv_y"
+        android:id="@+id/edt_y" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_y"
+        android:text="@string/calculate"
+        android:id="@+id/btn_calculate1"/>
+</RelativeLayout>

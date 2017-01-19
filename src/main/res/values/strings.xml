@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Operaciones</string>
+    <string name="select_equat">Select the equation</string>
+    <string name="first_equat">First equation</string>
+    <string name="second_equat">Second equation</string>
+    <string name="show">Show</string>
+    <string name="calculate">Calculate</string>
+    <string name="type_y">Type value Y :</string>
+    <string name="type_x">Type value X :</string>
+    <string name="equation2">(3a - b)^2 + 3(a + b)^2</string>
+    <string name="type_a">Type value A:</string>
+    <string name="type_b">Type value B:</string>
+    <string name="equation1">xy[(x + y)^2 + (x - y)^2]</string>
+    <string name="equation">Equation : </string>
+</resources>
