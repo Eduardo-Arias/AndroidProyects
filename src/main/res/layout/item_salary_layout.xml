@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cv_salary"
+    android:layout_margin="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/iv_salary"
+            android:src="@mipmap/ic_launcher"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="16dp"/>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_salary_no_emp"
+            android:layout_toRightOf="@id/iv_salary"
+            android:textSize="15pt"
+            android:text="Salary No Emp"
+            />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt_edit_salary"
+            android:src="@android:drawable/ic_menu_edit"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/tv_salary_no_emp"
+            android:layout_toEndOf="@+id/tv_salary_no_emp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt_delete_salary"
+            android:src="@android:drawable/ic_menu_delete"
+            android:layout_below="@+id/bt_edit_salary"
+            android:layout_toRightOf="@+id/tv_salary_no_emp"
+            android:layout_toEndOf="@+id/tv_salary_no_emp" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_salary"
+            android:text="Salary"
+            android:textSize="10pt"
+            android:layout_below="@+id/tv_salary_no_emp"
+            android:layout_toLeftOf="@+id/bt_delete_salary"
+            android:layout_toStartOf="@+id/bt_delete_salary" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_salary_from_date"
+            android:text="From Date"
+            android:textSize="10pt"
+            android:layout_below="@+id/tv_salary_no_emp"
+            android:layout_toRightOf="@+id/iv_salary"
+            android:layout_toEndOf="@+id/iv_salary" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

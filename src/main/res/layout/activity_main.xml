@@ -1,49 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
-    tools:context="utng.edu.mx.da3_u1_jead_operaciones.MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/select_equat"
-        android:layout_gravity="center"
-        android:textSize="30sp"
-        android:textColor="@color/colorPrimaryDark"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="90dp"
-        android:layout_gravity="center"
-        android:text="@string/first_equat"
-        android:textSize="20sp" />
-    <Button
+    tools:context=".MainActivity">
+<android.support.design.widget.AppBarLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:theme="@style/AppTheme.AppBarOverlay">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/show"
-        android:onClick="lanzarE1"
-        android:id="@+id/btn_equation1"/>
-    <TextView
+        android:layout_height="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+</android.support.design.widget.AppBarLayout>
+    <include layout="@layout/content_main"/>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:text="@string/second_equat"
-        android:textSize="20sp" />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/show"
-        android:onClick="lanzarE2"
-        android:id="@+id/btn_equation2"/>
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_dialog_email"/>
 
-</LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
