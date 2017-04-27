@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://ws.utng.edu.mx" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://ws.utng.edu.mx" xmlns:intf="http://ws.utng.edu.mx" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://ws.utng.edu.mx" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="addExam">
+    <complexType>
+     <sequence>
+      <element name="exam" type="impl:ExamDef"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ExamDef">
+    <sequence>
+     <element name="description" nillable="true" type="xsd:string"/>
+     <element name="duration" type="xsd:int"/>
+     <element name="examTake" nillable="true" type="xsd:string"/>
+     <element name="id" type="xsd:int"/>
+     <element name="mininumCorr" type="xsd:int"/>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="questionDef" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="addExamResponse">
+    <complexType>
+     <sequence>
+      <element name="addExamReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="editExam">
+    <complexType>
+     <sequence>
+      <element name="exam" type="impl:ExamDef"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="editExamResponse">
+    <complexType>
+     <sequence>
+      <element name="editExamReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="removeExam">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="removeExamResponse">
+    <complexType>
+     <sequence>
+      <element name="removeExamReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getExams">
+    <complexType/>
+   </element>
+   <element name="getExamsResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getExamsReturn" type="impl:ExamDef"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getExamDefById">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getExamDefByIdResponse">
+    <complexType>
+     <sequence>
+      <element name="getExamDefByIdReturn" type="impl:ExamDef"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="removeExamResponse">
+
+      <wsdl:part element="impl:removeExamResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getExamDefByIdResponse">
+
+      <wsdl:part element="impl:getExamDefByIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="editExamRequest">
+
+      <wsdl:part element="impl:editExam" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getExamDefByIdRequest">
+
+      <wsdl:part element="impl:getExamDefById" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addExamResponse">
+
+      <wsdl:part element="impl:addExamResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getExamsRequest">
+
+      <wsdl:part element="impl:getExams" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeExamRequest">
+
+      <wsdl:part element="impl:removeExam" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addExamRequest">
+
+      <wsdl:part element="impl:addExam" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="editExamResponse">
+
+      <wsdl:part element="impl:editExamResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getExamsResponse">
+
+      <wsdl:part element="impl:getExamsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="ExamDefWS">
+
+      <wsdl:operation name="addExam">
+
+         <wsdl:input message="impl:addExamRequest" name="addExamRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:addExamResponse" name="addExamResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="editExam">
+
+         <wsdl:input message="impl:editExamRequest" name="editExamRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:editExamResponse" name="editExamResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeExam">
+
+         <wsdl:input message="impl:removeExamRequest" name="removeExamRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:removeExamResponse" name="removeExamResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getExams">
+
+         <wsdl:input message="impl:getExamsRequest" name="getExamsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getExamsResponse" name="getExamsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getExamDefById">
+
+         <wsdl:input message="impl:getExamDefByIdRequest" name="getExamDefByIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getExamDefByIdResponse" name="getExamDefByIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="ExamDefWSSoapBinding" type="impl:ExamDefWS">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="addExam">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addExamRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addExamResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="editExam">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="editExamRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="editExamResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeExam">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeExamRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeExamResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getExams">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getExamsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getExamsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getExamDefById">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getExamDefByIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getExamDefByIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="ExamDefWSService">
+
+      <wsdl:port binding="impl:ExamDefWSSoapBinding" name="ExamDefWS">
+
+         <wsdlsoap:address location="http://localhost:8080/ExamDef/services/ExamDefWS"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
